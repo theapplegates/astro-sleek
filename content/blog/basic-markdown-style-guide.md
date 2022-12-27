@@ -4,6 +4,9 @@ description: "You can author content using the familiar markdown syntax you alre
 date: 2022-11-02
 ---
 
+![X-box game](https://applegate-paul.mo.cloudinary.net/zoom/Xbox.jpg)
+
+
 Markdown is powered by [Markdoc](https://markdoc.dev/). This post is an example to showcase the support of all basic markdown syntax. You can author content using the familiar markdown syntax you already know.
 
 ## Inline formatting
