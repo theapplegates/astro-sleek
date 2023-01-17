@@ -20,6 +20,7 @@
     "@markdoc/markdoc": "^0.2.1",
     "@tailwindcss/typography": "^0.5.8",
     "astro": "^1.7.1",
+    "astro-imagetools": "^0.7.3",
     "astro-markdoc-renderer": "0.0.1-alpha.0",
     "date-fns": "^2.29.3",
     "globby": "^13.1.3",

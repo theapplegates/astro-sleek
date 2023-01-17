@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import { astroImageTools } from "astro-imagetools";
 
 /*
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
@@ -36,11 +37,12 @@ export default defineConfig({
     port: SERVER_PORT
   },
   site: BASE_URL,
-  integrations: [sitemap(), tailwind({
+  integrations: [sitemap(), astroImageTools, tailwind({
     config: {
       applyBaseStyles: false
     }
   }), image({
+      format: ['AVIF', 'WEBP'],
       serviceEntryPoint: '@astrojs/image/sharp'
     }), mdx()]
 });
