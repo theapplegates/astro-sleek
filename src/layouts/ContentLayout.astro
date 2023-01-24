@@ -1,5 +1,5 @@
 ---
-/* 
+/*
   This layout is used in pages that render markdoc content
   - pages/blog/[slug].astro
 */
@@ -40,6 +40,10 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <GoogleFont />
     <ThemeScript />
     <FontAwesome />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+    />
   </head>
 
   <body
@@ -68,5 +72,22 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         grid-area: main;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+      docsearch({
+        // Your Search API Key
+        apiKey: 'b41c1eba2c01caa404e65504a1532e34',
+        // The index populated by the DocSearch scraper
+        indexName: 'docsearch',
+        // Your Algolia Application ID
+        appId: 'IH8GK7SNAB',
+        // Replace inputSelector with a CSS selector
+        // matching your search input
+        inputSelector: '#docsearch',
+        // Set debug to true to inspect the dropdown
+        debug: false,
+      });
+    </script>
+    <div id="docsearch"></div>
   </body>
 </html>
