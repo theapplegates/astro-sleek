@@ -32,17 +32,19 @@ if (isBuild) {
 // https://astro.build/config
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
   server: {
     port: SERVER_PORT
   },
-  site: BASE_URL,
+  site: 'https://sleek.paulapplegate.com',
   integrations: [sitemap(), astroImageTools, tailwind({
     config: {
       applyBaseStyles: false
     }
   }), image({
-      format: ['AVIF', 'WEBP'],
-      serviceEntryPoint: '@astrojs/image/sharp'
-    }), mdx()]
+    format: ['AVIF', 'WEBP'],
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), mdx()]
 });
